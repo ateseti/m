@@ -24,7 +24,7 @@
   <script>
    $(document).ready(function() {
     var h = ".h"; var c = ".c"; var f = ".f"; var video = "video"; var none = "none";
-    $(h).load('assets/php/headmultes.php'); $(f).load('assets/php/footmultes.php'); setTimeout(function() {$('.c,.f').css('display', 'flex')}, 500);
+    $(h).load('assets/php/header.html'); $(f).load('assets/php/footer.html'); setTimeout(function() {$('.c,.f').css('display', 'flex')}, 500);
     var ps = "home"; sessionStorage.setItem("ps", ps);
     var rod = new ResizeObserver(entries => {if ((($(window).width())) > (($(window).height() / 9) * 16)) {$(video).css({'width': '100%', 'height': 'auto'})} else {$(video).css({'width': 'auto', 'height': '100%'})}}); rod.observe(document.querySelector('body'));
    });
