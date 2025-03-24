@@ -18,7 +18,9 @@
    .fakecover {width: 100%; top: 0px; position: fixed; display: flex; flex-direction: column; align-items: center; pointer-events: none;} .bad {width: 0px; height: 0.02px;} .badopen {height: var(--bad);} .dropen {height: 100%;}
    .menucover {width: var(--logo); padding: var(--pat); display: flex;} .tlft,.txtr,.txtn {min-height: 22px; display: flex; align-items: center; font-weight: bold;} .tlft {width: 236.66666667px;} .txtr {gap: 34px;} .txtn {gap: 17px;}
    .txtm {display: none; align-items: center; cursor: pointer; pointer-events: auto; -webkit-tap-highlight-color: var(--trans);} #txtw,#txtc,.dvd,.paf {display: flex;} .nopen {width: 0px;}
-   .ic {width: var(--mcn); height: var(--mcn); background: var(--hitam); pointer-events: none;} #sic {mask: var(--loupe); mask-size: var(--mcn);} .dic {width: var(--mcn); height: var(--mcn); background: pink; pointer-events: none;} .st {display: none; color: var(--hitam); pointer-events: none;} .mopen {color: var(--putih);}
+   .ic {width: var(--mcn); height: var(--mcn); background: var(--hitam); pointer-events: none;} #sic {mask: var(--loupe); mask-size: var(--mcn);} .st {display: none; color: var(--hitam); pointer-events: none;} .mopen {color: var(--putih);}
+   .dic {width: max-content; height: max-content; display: flex; flex-direction: column; pointer-events: none;} .dsc {width: 11px; height: 11px; border: 2px solid var(--hitam); border-radius: 1000px;}
+   .dlc {width: var(--mcn); margin-top: -1px; display: flex; justify-content: flex-end;} .dlcc {width: 5.5px; height: 2px; transform: translate(0.51px, -1.24px) rotate(45deg); border-radius: 1000px; background: var(--hitam);}
    .hms,.hmd,.hmt {height: var(--mcn); display: flex; flex-direction: column; justify-content: space-between; align-items: center; cursor: pointer; -webkit-tap-highlight-color: var(--trans);}
    .hms,.hmt {width: var(--mcn); pointer-events: none;} .hms {opacity: 0;} .hmd {width: var(--msb); margin-right: -33px; pointer-events: auto;} .hmdopen {width: var(--mcn);} .ndopen {opacity: 0; pointer-events: none;}
    .sline,.dline,.tline {width: var(--msb); height: 2px; border-radius: 1000px; background: var(--hitam); pointer-events: none;} #txtw {margin-right: 0px;}
@@ -105,7 +107,8 @@
     </div><div class='bpat'></div></div>
     <div class='itemdrop' id='idw'><div class='wpaw'></div><div class='dropbody' id='dbw'><div class='searchbox'>
      <div class='inputcover'>
-      <div class='searchicon' style='transform:translateX(100%);'><div class='vad'></div><div class='dic'></div></div><input type='text' placeholder='WHAT ARE YOU LOOKING FOR?' title='What are you looking for?' class='inputbox' autocomplete='off'>
+      <div class='searchicon' style='transform:translateX(100%);'><div class='vad'></div><div class='dic'><div class='dsc'></div><div class='dlc'><div class='dlcc'></div></div></div></div>
+      <input type='text' placeholder='WHAT ARE YOU LOOKING FOR?' title='What are you looking for?' class='inputbox' autocomplete='off'>
       <div class='searchicon' style='transform:translateX(-100%);justify-content:flex-end;'><div class='hms'><div class='sline' id='tops'></div><div class='sline' id='mids'></div><div class='sline' id='bots'></div></div><div class='vad'></div></div>
      </div>
     </div><div class='searchres'></div></div><div class='bpat'></div></div>
