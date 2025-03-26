@@ -14,7 +14,7 @@
    body {margin: 0 auto; padding: env(safe-area-inset); font-family: var(--fon); background-color: var(--trans); overflow-x: hidden; overflow-y: hidden; touch-action: none;} body:focus {outline: none !important;}
    .c,.f {display: none;} .c,.v {width: 100%;} .c {margin: 0 auto;} .c {flex-direction: column; align-items: center; text-transform: uppercase;} .mshow {display: flex;}
    .v {height: 100dvh; overflow: hidden; touch-action: none; display: flex; justify-content: center; align-items: center; z-index: -1; pointer-events: none;} .hhcov,.hbutcov {display: flex; flex-direction: column;}
-   .hhcov {width: var(--logo); padding: var(--pat); pointer-events: none;} .hbutcov {width: max-content; font-weight: bold; gap: 17px;} .htitle {max-width: 393px; font-size: 33px; color: var(--putih); pointer-events: auto;}
+   .hhcov {width: var(--logo); padding: var(--pat); pointer-events: none;} .hbutcov {width: 50%; font-weight: bold; gap: 17px;} .htitle {max-width: 393px; font-size: 33px; color: var(--putih); pointer-events: auto;}
    .hbutton {width: 133px; height: 59px; font-size: 17px; color: var(--hitam); background: var(--putih); display: flex; justify-content: center; align-items: center; cursor: pointer;
              pointer-events: auto; transition: color 0.2s ease, background 0.2s ease; -webkit-tap-highlight-color: rgba(38, 73, 150, 0.2);} .hbutton:hover {color: var(--putih); background: var(--biru);}
    @media screen and (min-width: 1024px) {.htitle {max-width: 798px; font-size: 67px;}}
@@ -31,10 +31,10 @@
   <div class='f'></div>
   <script>
    $(document).ready(function() {
-    var ps = 'home'; var h = '.h'; var c = '.c'; var f = '.f'; var video = 'video'; var hbutcov = '.hbutcov';
+    var ps = 'home'; var h = '.h'; var c = '.c'; var f = '.f'; var video = 'video'; var hhcov = '.hhcov';
     new ResizeObserver(entries => {
      if ((($(window).width())) > (($(window).height() / 9) * 16)) {$(video).css({'width': '100%', 'height': 'auto'})} else {$(video).css({'width': 'auto', 'height': '100%'})};
-     $(hbutcov).css('margin-top', '-' + $(hbutcov).height() + 'px');
+     $(hhcov).css('margin-top', '-' + $(hhcov).height() + 'px');
     }).observe(document.querySelector('body'));
     sessionStorage.setItem('ps', ps); $(h).load('assets/php/header.html'); $(f).load('assets/php/footer.html'); setTimeout(function() {$('.c,.f').addClass('mshow')}, 500);
    });
