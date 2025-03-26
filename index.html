@@ -12,8 +12,9 @@
   <title>Mulavarman Official Website | For Human Beings</title>
   <style>
    body {margin: 0 auto; padding: env(safe-area-inset); font-family: var(--fon); background-color: var(--trans); overflow-x: hidden; overflow-y: hidden; touch-action: none;} body:focus {outline: none !important;}
-   .c,.f {display: none;} .c,.v {width: 100%;} .c {margin: 0 auto;} .c,.hbutcov {flex-direction: column; align-items: center; text-transform: uppercase;} .mshow,.hbutcov {display: flex;}
-   .v {height: 100dvh; overflow: hidden; touch-action: none; display: flex; justify-content: center; align-items: center; z-index: -1; pointer-events: none;} .hbutcov {pointer-events: none;}
+   .c,.f {display: none;} .c,.v {width: 100%;} .c {margin: 0 auto;} .c {flex-direction: column; align-items: center; text-transform: uppercase;} .mshow {display: flex;}
+   .v {height: 100dvh; overflow: hidden; touch-action: none; display: flex; justify-content: center; align-items: center; z-index: -1; pointer-events: none;}
+   .hbutcov {width: var(--logo); display: flex; flex-direction: column; background: maroon; pointer-events: none;}
    .hbutton {width: 128px; height: 59px; font-weight: bold; color: var(--hitam); background: var(--putih); display: flex; justify-content: center; align-items: center; cursor: pointer; pointer-events: auto;
              transition: color 0.2s ease, background 0.2s ease; -webkit-tap-highlight-color: rgba(38, 73, 150, 0.2);} .hbutton:hover {color: var(--putih); background: var(--biru);}
   </style>
@@ -28,7 +29,7 @@
     var ps = 'home'; var h = '.h'; var c = '.c'; var f = '.f'; var video = 'video'; var hbutcov = '.hbutcov';
     new ResizeObserver(entries => {
      if ((($(window).width())) > (($(window).height() / 9) * 16)) {$(video).css({'width': '100%', 'height': 'auto'})} else {$(video).css({'width': 'auto', 'height': '100%'})};
-     $(hbutcov).css('margin-top', '-10px');
+     $(hbutcov).css('margin-top', '-' + $(hbutcov).height() + 'px');
     }).observe(document.querySelector('body'));
     sessionStorage.setItem('ps', ps); $(h).load('assets/php/header.html'); $(f).load('assets/php/footer.html'); setTimeout(function() {$('.c,.f').addClass('mshow')}, 500);
    });
