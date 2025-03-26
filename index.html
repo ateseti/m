@@ -28,7 +28,7 @@
     var ps = 'home'; var h = '.h'; var c = '.c'; var f = '.f'; var video = 'video'; var hbutcov = '.hbutcov';
     new ResizeObserver(entries => {
      if ((($(window).width())) > (($(window).height() / 9) * 16)) {$(video).css({'width': '100%', 'height': 'auto'})} else {$(video).css({'width': 'auto', 'height': '100%'})};
-     $(hbutcov).css('margin-top', '-0px');
+     $(hbutcov).css('margin-top', '-10px');
     }).observe(document.querySelector('body'));
     sessionStorage.setItem('ps', ps); $(h).load('assets/php/header.html'); $(f).load('assets/php/footer.html'); setTimeout(function() {$('.c,.f').addClass('mshow')}, 500);
    });
