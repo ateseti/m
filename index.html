@@ -15,10 +15,10 @@
    .c,.f {display: none;} .c,.v,.hbutcov {width: 100%;} .c {margin: 0 auto;} .c {flex-direction: column; align-items: center; text-transform: uppercase;} .mshow {display: flex;}
    .v {height: 100dvh; overflow: hidden; touch-action: none; display: flex; justify-content: center; align-items: center; z-index: -1; pointer-events: none;}
    .hhcov,.hbutcov {display: flex; flex-direction: column;} .hhcov {width: var(--logo); padding: var(--pat); pointer-events: none;} .hbutcov {font-weight: bold; gap: 17px;}
-   .htitle {max-width: 393px; font-size: 33px; color: var(--putih); pointer-events: auto;}
+   .htitle {max-width: 393px; font-size: 33px; color: var(--putih); pointer-events: auto;} .hpad {width: 100px; height: 24px; background: maroon;}
    .hbutton {width: 133px; height: 59px; font-size: 17px; color: var(--hitam); background: var(--putih); display: flex; justify-content: center; align-items: center; cursor: pointer;
              pointer-events: auto; transition: color 0.2s ease, background 0.2s ease; -webkit-tap-highlight-color: rgba(38, 73, 150, 0.2);} .hbutton:hover {color: var(--putih); background: var(--biru);}
-   @media screen and (min-width: 1024px) {.htitle {max-width: 798px; font-size: 67px;}}
+   @media screen and (min-width: 1024px) {.htitle {max-width: 798px; font-size: 67px;} .hpad {height: 34px;}}
    @media screen and (min-width: 768px) {.hbutcov {gap: 21px;}}
   </style>
   <script src='https://code.jquery.com/jquery-3.7.0.js'></script>
@@ -27,7 +27,7 @@
   <div class='h'></div>
   <div class='c'>
    <div class='v'><video playsinline autoplay muted loop><source src='assets/video-home-main-1080.mp4' type='video/mp4'></video></div>
-   <div class='hhcov'><div class='hbutcov'><div class='htitle'>short sleeve crew neck t-shirt</div><div class='hbutton'>shop&nbsp;now</div></div></div>
+   <div class='hhcov'><div class='hpad'></div><div class='hbutcov'><div class='htitle'>short sleeve crew neck t-shirt</div><div class='hbutton'>shop&nbsp;now</div></div><div class='hpad'></div></div>
   </div>
   <div class='f'></div>
   <script>
