@@ -21,7 +21,7 @@
    .sic,.dic {width: max-content; height: max-content; display: flex; flex-direction: column; pointer-events: none;} .ssc,.dsc {width: 11px; height: 11px; border: 2px solid var(--hitam); border-radius: 1000px;}
    .slc,.dlc {width: var(--mcn); margin-top: -1px; display: flex; justify-content: flex-end;} .slcc,.dlcc {width: 5.5px; height: 2px; transform: translate(0.51px, -1.24px) rotate(45deg); border-radius: 1000px; background: var(--hitam);}
    .hms,.hmd,.hmt,.hme {height: var(--mcn); display: flex; flex-direction: column; justify-content: space-between; align-items: center; cursor: pointer; -webkit-tap-highlight-color: var(--trans);}
-   .hms,.hmt,.hme {width: var(--mcn); pointer-events: none;} .hms {opacity: 0;} .hmd {width: var(--msb); pointer-events: auto;} .hmd,.hme {margin-right: -33px;} .hmdopen {width: var(--mcn);} .ndopen {opacity: 0; pointer-events: none;}
+   .hms,.hmt {width: var(--mcn); pointer-events: none;} .hms {opacity: 0;} .hmd {width: var(--msb); pointer-events: auto;} .hme {width: var(--msb); margin-right: -33px;} .ndopen {opacity: 0; pointer-events: none;}
    .sline,.dline,.tline,.eline {width: var(--msb); height: 2px; border-radius: 1000px; background: var(--hitam); pointer-events: none;} #txtw {margin-right: 0px;} .mopen {color: var(--putih);} .smopen {border: 2px solid var(--putih);} .imopen {background: var(--putih);}
    .linopen {pointer-events: none;} .midso {width: 0px;} .topso {transform: translateY(7px) rotate(45deg);} .botso {transform: translateY(-7px) rotate(-45deg);} .topdo {transform: translateY(7px);} .botdo {transform: translateY(-7px);}
    .barlogo {width: var(--logo); height: calc(100dvh - 42px); left: 50%; transform: translateX(-50%); top: 21px; display: flex; position: fixed; pointer-events: none;}
@@ -57,7 +57,7 @@
                          }
    @media screen and (min-width: 1024px) {.txtm {display: flex;} .st {display: block;} .hmd,.hme {display: none;} #txtw {margin-right: -37px;} .dvd,.paf {display: none;}}
    @media screen and (min-width: 768px) {:root {--ib: calc(100% - 88px); --logo: calc(100% - 34px); --mlb: 256px; --mlf: 256px; --bad: 50px; --is: 34px; --rad: 28px 0px 27px; --dad: 28px 0px 67px; --pat: 0px 17px; --paw: 11px 17px;}
-                                         .full,.side {width: 418px;} .bad {height: 0px;} .badopen {height: var(--bad);} .tlft {width: 358px;} .txtn {gap: 21px;} .hmd,.hme {margin-right: -37px;}
+                                         .full,.side {width: 418px;} .bad {height: 0px;} .badopen {height: var(--bad);} .tlft {width: 358px;} .txtn {gap: 21px;} .hme {margin-right: -37px;}
                                          .barlogo {height: calc(100dvh - 56px); top: 28px;} .barlink {left: 17px; top: 28px;} .fakebar {margin-left: 17px;} #idw {width: calc(100% - 32px); padding: 0px 16px;} .inputbox {padding-inline: 44px;}
                                          .searchicon {min-width: 44px;} .vad {min-width: 17px;} .nopen {width: 0px;}
                                         }
@@ -183,16 +183,16 @@
     function fzm() {if ($(blck).css('opacity') == '0') {$(blck).addClass('barzock')} else {$(blck).removeClass('barzock')}}; function nrp() {
      if ($(side).css('opacity') == '1') {$('.full,.side').addClass('sdclose'); setTimeout(function() {$('.full,.side').addClass('sdnone')}, 500);};
      $('.txtm:not(#txtc)').removeClass('ndopen'); $(st).removeClass('blopen'); $(hme).removeClass('ndopen'); $(tline).removeClass('blimopen');
-     $(topd).removeClass('topso'); $(botd).removeClass('botso'); setTimeout(function() {$(hmd).removeClass('ndopen'); $(hme).addClass('ndopen'); $(midd).removeClass('midso');}, 250); $(inputbox).blur(); if ($(txtc).css('opacity') == '1') {$(txtc).addClass('ndopen')};
+     $(topd).removeClass('topso'); $(botd).removeClass('botso'); setTimeout(function() {$(hmd).removeClass('ndopen'); $(midd).removeClass('midso');}, 250); $(inputbox).blur(); if ($(txtc).css('opacity') == '1') {$(txtc).addClass('ndopen')};
      if ($(idw).css('display') == none) {$(drop).removeClass('dropen'); $(itemdrop).removeClass('ddopen opone'); bop();} else {$(idw).removeClass('opone'); setTimeout(function() {$(drop).removeClass('dropen'); $(idw).removeClass('ddopen'); bop();}, 500);};
      setTimeout(function() {if ($(s).css('background-color') == awan) {$(sidebar).removeClass('ddopen')}; $(sidebar).removeClass('slopen dlopen tlopen opone'); $('.didebar,.tidebar,.fidebar,.tettitem').removeClass('ddopen slopen dlopen tlopen opone'); $(tettitem).text('');
-                            $(hmd).removeClass('hmdopen');}, 500);
+                           }, 500);
     }; function mnpn() {nrp(); if ($(s).css('background-color') == awan) {$(s).addClass('stopen'); if ($(k).css('background-color') == maroon) {sblwh(); tblwh();};};}; function smnpn() {
      nrp(); if (matchMedia('(hover: hover)').matches) {sop()} else {if ($(blck).css('opacity') == '0') {sop()} else {$(drop).addClass('dropen'); $(idw).addClass('ddopen opone');}};
      if ($(s).css('background-color') == awan) {$(s).addClass('stopen'); if ($(k).css('background-color') == maroon) {sblwh(); tblwh();};}; $(inputbox).focus();
     }; function tchpn() {
-     $(dline).css('transition', 'transform ' + transet); $('.txtm:not(#txtc)').addClass('ndopen'); $(hmd).addClass('hmdopen'); $('.dline,.tline').addClass('blimopen');
-     $(topd).addClass('topdo'); $(botd).addClass('botdo'); setTimeout(function() {$(hmd).addClass('ndopen'); $(hme).removeClass('ndopen'); $(midd).addClass('midso');}, 250);
+     $(dline).css('transition', 'transform ' + transet); $('.txtm:not(#txtc)').addClass('ndopen'); $('.dline,.tline').addClass('blimopen');
+     $(topd).addClass('topdo'); $(botd).addClass('botdo'); setTimeout(function() {$(hmd).addClass('ndopen'); $(midd).addClass('midso');}, 250);
      if ($(n).css('background-color') == linen) {setTimeout(function() {$(txtc).removeClass('ndopen')}, 500)} else {if (matchMedia('(hover: hover)').matches) {cop()} else {if ($(blck).css('opacity') == '0') {cop()} else {$(txtc).removeClass('ndopen')}};};
      setTimeout(function() {$(dline).css('transition', transot); $(hme).addClass('ndopen'); $(dline).removeClass('blimopen');}, 500);
     }; function sdpn() {
@@ -220,7 +220,7 @@
     $(inputbox).on('focus', function() {if ($(searchbox).css('background-color') == trans) {$(searchbox).addClass('blimopen')}; tpbgt();}).on('blur', function() {if ($(searchbox).css('background-color') == biru) {$(searchbox).removeClass('blimopen')}; tpbgt();});
     $(inputbox).on('input', function() {if (!$(inputbox).val()) {if ($(hms).css('opacity') == '1') {gcl()}} else {if ($(hms).css('opacity') == '0') {gop()}}; tpbgt();});
     $('#txtw,#txtc,.hms,.brck,.blck').on('mousedown', function() {return false}); $(txtw).on('click', function() {gotrns(); bltrns(); bls(); smnpn(); tchpn();}); $(txtc).addClass('ndopen').on('click', function() {zls()});
-    $(hms).on('click', function() {$(inputbox).val(''); gcl();}); $(hmd).on('click', function() {botrns(); bltrns(); bls(); mnpn(); tchpn(); sdpn();}); $(hme).addClass('ndopen');
+    $(hms).on('click', function() {$(inputbox).val(''); gcl();}); $(hmd).on('click', function() {botrns(); bltrns(); bls(); mnpn(); tchpn(); sdpn();});
     $('.textitem:not(#til)').on('click', function() {
      bls(); $(this).addClass('blopen'); $(this).find('.lns,.lnd').addClass('blimopen'); $(this).parents().eq(2).find('#s' + $(this).attr('id')).addClass('ddopen'); $(fidebar).addClass('ddopen slopen'); $(ttts).text($(this).text()).addClass('opone'); $(didebar).scrollTop(0);
      setTimeout(function() {
