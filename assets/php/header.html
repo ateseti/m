@@ -22,9 +22,9 @@
    .slc,.dlc {width: var(--mcn); margin-top: -1px; display: flex; justify-content: flex-end;} .slcc,.dlcc {width: 5.5px; height: 2px; transform: translate(0.51px, -1.24px) rotate(45deg); border-radius: 1000px; background: var(--hitam);}
    .hms,.hmd,.hmt {height: var(--mcn); display: flex; flex-direction: column; justify-content: space-between; align-items: center; cursor: pointer; -webkit-tap-highlight-color: var(--trans);}
    .hms,.hmt {width: var(--mcn); pointer-events: none;} .hms {opacity: 0;} .hmd {width: var(--msb); margin-right: -33px; pointer-events: auto;} .ndopen {opacity: 0; pointer-events: none;}
-   .sline,.dline,.tline {width: var(--msb); height: 2px; border-radius: 1000px; background: var(--hitam); pointer-events: none;} #txtw {margin-right: 0px;}
-   .mopen {color: var(--putih);} .smopen {border: 2px solid var(--putih);} .imopen {background: var(--putih);} .linopen {pointer-events: none;} .midso {width: 0px;}
-   .topso {transform: translateY(7px) rotate(45deg);} .botso {transform: translateY(-7px) rotate(-45deg);} .topan {animation: 0.5s ease topkey;} .botan {animation: 0.5s ease botkey;} .midan {animation: 0.25s ease midkey;}
+   .sline,.dline,.tline {width: var(--msb); height: 2px; border-radius: 1000px; background: var(--hitam); pointer-events: none;} #txtw {margin-right: 0px;} .mopen {color: var(--putih);} .smopen {border: 2px solid var(--putih);}
+   .imopen {background: var(--putih);} .linopen {pointer-events: none;} .midso {width: 0px;} .topso {transform: translateY(7px) rotate(45deg);} .botso {transform: translateY(-7px) rotate(-45deg);}
+   .topan {animation: 0.5s ease topkey;} .botan {animation: 0.5s ease botkey;} .midan {animation: 0.25s ease midkey;} .toprn {animation: 0.5s ease reverse topkey;} .botrn {animation: 0.5s ease reverse botkey;} .midrn {animation: 0.25s ease reverse midkey;}
    .barlogo {width: var(--logo); height: calc(100dvh - 42px); left: 50%; transform: translateX(-50%); top: 21px; display: flex; position: fixed; pointer-events: none;}
    .barlink {left: 11px; top: 21px; position: fixed; color: var(--trans); text-decoration: none; user-select: none; pointer-events: auto; -webkit-tap-highlight-color: var(--trans);} .fakebar {margin-left: 11px; pointer-events: none;}
    .barlink,.fakebar {aspect-ratio: 256/33; width: var(--mlb);} .bakefar {aspect-ratio: 256/33; width: var(--mlf);} .barlopen {width: var(--logo);}
@@ -185,8 +185,8 @@
     function cop() {$(txtc).css('transition', transit); $(txtc).removeClass('ndopen'); setTimeout(function() {$(txtc).css('transition', transot)}, 500);};
     function fzm() {if ($(blck).css('opacity') == '0') {$(blck).addClass('barzock')} else {$(blck).removeClass('barzock')}}; function nrp() {
      if ($(side).css('opacity') == '1') {$('.full,.side').addClass('sdclose'); setTimeout(function() {$('.full,.side').addClass('sdnone')}, 500);}; $('.txtm:not(#txtc)').removeClass('ndopen');
-     $(st).removeClass('blopen'); $(hmd).removeClass('ndopen'); $(tline).removeClass('blimopen');
-     $(inputbox).blur(); if ($(txtc).css('opacity') == '1') {setTimeout(function() {$(midd).removeClass('midso')}, 250); $(txtc).addClass('ndopen');};
+     $(st).removeClass('blopen'); $(hmd).removeClass('ndopen'); $(tline).removeClass('blimopen'); $(inputbox).blur();
+     if ($(txtc).css('opacity') == '1') {$(topd).addClass('toprn'); setTimeout(function() {$(midd).removeClass('midso'); setTimeout(function() {$(topd).removeClass('toprn'); $(botd).removeClass('botrn');}, 250);}, 250); $(botd).addClass('botrn'); $(txtc).addClass('ndopen');};
      if ($(idw).css('display') == none) {$(drop).removeClass('dropen'); $(itemdrop).removeClass('ddopen opone'); bop();} else {$(idw).removeClass('opone'); setTimeout(function() {$(drop).removeClass('dropen'); $(idw).removeClass('ddopen'); bop();}, 500);};
      setTimeout(function() {if ($(s).css('background-color') == awan) {$(sidebar).removeClass('ddopen')}; $(sidebar).removeClass('slopen dlopen tlopen opone'); $('.didebar,.tidebar,.fidebar,.tettitem').removeClass('ddopen slopen dlopen tlopen opone'); $(tettitem).text('');
                            }, 500);
