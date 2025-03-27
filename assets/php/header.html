@@ -21,7 +21,7 @@
    .sic,.dic {width: max-content; height: max-content; display: flex; flex-direction: column; pointer-events: none;} .ssc,.dsc {width: 11px; height: 11px; border: 2px solid var(--hitam); border-radius: 1000px;}
    .slc,.dlc {width: var(--mcn); margin-top: -1px; display: flex; justify-content: flex-end;} .slcc,.dlcc {width: 5.5px; height: 2px; transform: translate(0.51px, -1.24px) rotate(45deg); border-radius: 1000px; background: var(--hitam);}
    .hms,.hmd,.hmt,.hme {height: var(--mcn); display: flex; flex-direction: column; justify-content: space-between; align-items: center; cursor: pointer; -webkit-tap-highlight-color: var(--trans);}
-   .hms,.hmt {width: var(--mcn); pointer-events: none;} .hms {opacity: 0;} .hmd {width: var(--msb); pointer-events: auto;} .hme {margin-right: -33px;} .hmeopen {width: var(--mcn);} .ndopen {opacity: 0; pointer-events: none;}
+   .hms,.hmt {width: var(--mcn); pointer-events: none;} .hms {opacity: 0;} .hmd {width: var(--msb); pointer-events: auto;} .hmd,.hme {margin-right: -33px;} .hmeopen {width: var(--mcn);} .ndopen {opacity: 0; pointer-events: none;}
    .sline,.dline,.tline,.eline {width: var(--msb); height: 2px; border-radius: 1000px; background: var(--hitam); pointer-events: none;} #txtw {margin-right: 0px;} .mopen {color: var(--putih);} .smopen {border: 2px solid var(--putih);} .imopen {background: var(--putih);}
    .linopen {pointer-events: none;} .midso {width: 0px;} .topso {transform: translateY(7px) rotate(45deg);} .botso {transform: translateY(-7px) rotate(-45deg);} .topdo {transform: translateY(7px);} .botdo {transform: translateY(-7px);}
    .barlogo {width: var(--logo); height: calc(100dvh - 42px); left: 50%; transform: translateX(-50%); top: 21px; display: flex; position: fixed; pointer-events: none;}
@@ -57,7 +57,7 @@
                          }
    @media screen and (min-width: 1024px) {.txtm {display: flex;} .st {display: block;} .hmd,.hme {display: none;} #txtw {margin-right: -37px;} .dvd,.paf {display: none;}}
    @media screen and (min-width: 768px) {:root {--ib: calc(100% - 88px); --logo: calc(100% - 34px); --mlb: 256px; --mlf: 256px; --bad: 50px; --is: 34px; --rad: 28px 0px 27px; --dad: 28px 0px 67px; --pat: 0px 17px; --paw: 11px 17px;}
-                                         .full,.side {width: 418px;} .bad {height: 0px;} .badopen {height: var(--bad);} .tlft {width: 358px;} .txtn {gap: 21px;} .hme {margin-right: -37px;}
+                                         .full,.side {width: 418px;} .bad {height: 0px;} .badopen {height: var(--bad);} .tlft {width: 358px;} .txtn {gap: 21px;} .hmd,.hme {margin-right: -37px;}
                                          .barlogo {height: calc(100dvh - 56px); top: 28px;} .barlink {left: 17px; top: 28px;} .fakebar {margin-left: 17px;} #idw {width: calc(100% - 32px); padding: 0px 16px;} .inputbox {padding-inline: 44px;}
                                          .searchicon {min-width: 44px;} .vad {min-width: 17px;} .nopen {width: 0px;}
                                         }
