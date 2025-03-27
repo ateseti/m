@@ -21,7 +21,7 @@
    .sic,.dic {width: max-content; height: max-content; display: flex; flex-direction: column; pointer-events: none;} .ssc,.dsc {width: 11px; height: 11px; border: 2px solid var(--hitam); border-radius: 1000px;}
    .slc,.dlc {width: var(--mcn); margin-top: -1px; display: flex; justify-content: flex-end;} .slcc,.dlcc {width: 5.5px; height: 2px; transform: translate(0.51px, -1.24px) rotate(45deg); border-radius: 1000px; background: var(--hitam);}
    .hms,.hmd,.hmt,.hme {height: var(--mcn); display: flex; flex-direction: column; justify-content: space-between; align-items: center; cursor: pointer; -webkit-tap-highlight-color: var(--trans);}
-   .hms,.hmt {width: var(--mcn); pointer-events: none;} .hms {opacity: 0;} .hmd,.hme {width: var(--msb); pointer-events: auto;} .hme {margin-right: -33px;} .hmeopen {width: var(--mcn);} .ndopen {opacity: 0; pointer-events: none;}
+   .hms,.hmt {width: var(--mcn); pointer-events: none;} .hms {opacity: 0;} .hmd {width: var(--msb); pointer-events: auto;} .hme {margin-right: -33px;} .hmeopen {width: var(--mcn);} .ndopen {opacity: 0; pointer-events: none;}
    .sline,.dline,.tline,.eline {width: var(--msb); height: 2px; border-radius: 1000px; background: var(--hitam); pointer-events: none;} #txtw {margin-right: 0px;} .mopen {color: var(--putih);} .smopen {border: 2px solid var(--putih);} .imopen {background: var(--putih);}
    .linopen {pointer-events: none;} .midso {width: 0px;} .topso {transform: translateY(7px) rotate(45deg);} .botso {transform: translateY(-7px) rotate(-45deg);} .topdo {transform: translateY(7px);} .botdo {transform: translateY(-7px);}
    .barlogo {width: var(--logo); height: calc(100dvh - 42px); left: 50%; transform: translateX(-50%); top: 21px; display: flex; position: fixed; pointer-events: none;}
@@ -160,7 +160,7 @@
     var putih = 'rgb(255, 255, 255)'; var hitam = 'rgb(0, 0, 0)'; var biru = 'rgb(38, 73, 150)'; var abu = 'rgb(128, 128, 128)'; var maroon = 'rgb(128, 0, 0)';
     var awan = 'rgb(135, 206, 235)'; var pink = 'rgb(255, 192, 203)'; var linen = 'rgb(250, 240, 230)'; var trans = 'rgba(0, 0, 0, 0)';
     var barcover = '.barcover'; var bar = '.bar'; var drop = '.drop'; var side = '.side'; var bad = '.bad'; var tlft = '.tlft'; var txtw = '#txtw'; var txtc = '#txtc'; var ssc = '.ssc'; var slcc = '.slcc'; var st = '.st';
-    var hms = '.hms'; var hmd = '.hmd'; var sline = '.sline'; var dline = '.dline'; var tline = '.tline'; var topd = '#topd'; var midd = '#midd'; var botd = '#botd'; var logo = '.logo'; var itemdrop = '.itemdrop'; var idw = '#idw';
+    var hms = '.hms'; var hmd = '.hmd'; var sline = '.sline'; var dline = '.dline'; var tline = '.tline'; var topd = '#topd'; var midd = '#midd'; var botd = '#botd'; var tope = '#tope'; var bote = '#bote'; var logo = '.logo'; var itemdrop = '.itemdrop'; var idw = '#idw';
     var searchbox = '.searchbox'; var inputbox = '.inputbox'; var faketop = '.faketop'; var sidebar = '.sidebar'; var didebar = '.didebar'; var tidebar = '.tidebar'; var fidebar = '.fidebar';
     var textitem = '.textitem'; var teztitem = '.teztitem'; var tettitem = '.tettitem'; var ttts = '#ttts'; var tttd = '#tttd'; var bck = '.bck'; var brck = '.brck'; var blck = '.blck'; var s = '.s'; var n = '.n'; var k = '.k'; var load = '.load';
     var transot = '0s'; var transit = '0.5s'; var transet = '0.25s'; var none = 'none'; var hidden = 'hidden';
@@ -215,7 +215,8 @@
      if ($(k).css('background-color') == maroon) {$('.bad,.tlft,.bakefar').css('transition', transit); $(logo).css('transition', 'mask-size ' + transit); gblwh(); blwh(); setTimeout(function() {$('.bad,.tlft,.bakefar,.logo').css('transition', transot)}, 500);}
      else {$('.bar,.bad,.tlft,.ssc,.slcc,.st,.dline,.barlink,.fakebar,.bakefar,.logo').css('transition', transit); sblwh(); tblwh(); setTimeout(function() {$('.bar,.bad,.tlft,.ssc,.slcc,.st,.dline,.barlink,.fakebar,.bakefar,.logo').css('transition', transot)}, 500);};
     }).observe(document.getElementById('k'), {attributes: true, attributeFilter: ['class']});
-    $(drop).addClass('open'); $('.full,.side').addClass('sdclose sdnone'); $('.itemdrop:not(#idw),.searchres,.sidebar,.didebar,.tidebar').addClass('badan'); $('#tops,#topt').addClass('topso'); $('#mids,#midt').addClass('midso'); $('#bots,#bott').addClass('botso');
+    $(drop).addClass('open'); $('.full,.side').addClass('sdclose sdnone'); $('.itemdrop:not(#idw),.searchres,.sidebar,.didebar,.tidebar').addClass('badan');
+    $('#tops,#topt').addClass('topso'); $('#mids,#midt,#mide').addClass('midso'); $('#bots,#bott').addClass('botso'); $(tope).addClass('topdo'); $(bote).addClass('botdo');
     $(inputbox).on('focus', function() {if ($(searchbox).css('background-color') == trans) {$(searchbox).addClass('blimopen')}; tpbgt();}).on('blur', function() {if ($(searchbox).css('background-color') == biru) {$(searchbox).removeClass('blimopen')}; tpbgt();});
     $(inputbox).on('input', function() {if (!$(inputbox).val()) {if ($(hms).css('opacity') == '1') {gcl()}} else {if ($(hms).css('opacity') == '0') {gop()}}; tpbgt();});
     $('#txtw,#txtc,.hms,.brck,.blck').on('mousedown', function() {return false}); $(txtw).on('click', function() {gotrns(); bltrns(); bls(); smnpn(); tchpn();}); $(txtc).addClass('ndopen').on('click', function() {zls()});
