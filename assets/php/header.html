@@ -185,8 +185,8 @@
     function cop() {$(txtc).css('transition', transit); $(txtc).removeClass('ndopen'); setTimeout(function() {$(txtc).css('transition', transot)}, 500);};
     function fzm() {if ($(blck).css('opacity') == '0') {$(blck).addClass('barzock')} else {$(blck).removeClass('barzock')}}; function nrp() {
      if ($(side).css('opacity') == '1') {$('.full,.side').addClass('sdclose'); setTimeout(function() {$('.full,.side').addClass('sdnone')}, 500);}; $('.txtm:not(#txtc)').removeClass('ndopen');
-     $(st).removeClass('blopen'); $(hmd).removeClass('ndopen'); $(tline).removeClass('blimopen'); $(midd).removeClass('midso');
-     $(inputbox).blur(); if ($(txtc).css('opacity') == '1') {alert('hey'); $(txtc).addClass('ndopen');};
+     $(st).removeClass('blopen'); $(hmd).removeClass('ndopen'); $(tline).removeClass('blimopen');
+     $(inputbox).blur(); if ($(txtc).css('opacity') == '1') {setTimeout(function() {$(midd).removeClass('midso')}, 250); $(txtc).addClass('ndopen');};
      if ($(idw).css('display') == none) {$(drop).removeClass('dropen'); $(itemdrop).removeClass('ddopen opone'); bop();} else {$(idw).removeClass('opone'); setTimeout(function() {$(drop).removeClass('dropen'); $(idw).removeClass('ddopen'); bop();}, 500);};
      setTimeout(function() {if ($(s).css('background-color') == awan) {$(sidebar).removeClass('ddopen')}; $(sidebar).removeClass('slopen dlopen tlopen opone'); $('.didebar,.tidebar,.fidebar,.tettitem').removeClass('ddopen slopen dlopen tlopen opone'); $(tettitem).text('');
                            }, 500);
