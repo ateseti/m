@@ -166,7 +166,7 @@
     var textitem = '.textitem'; var teztitem = '.teztitem'; var tettitem = '.tettitem'; var ttts = '#ttts'; var tttd = '#tttd'; var bck = '.bck'; var brck = '.brck'; var blck = '.blck'; var s = '.s'; var n = '.n'; var k = '.k'; var load = '.load';
     var transot = '0s'; var transit = '0.5s'; var none = 'none'; var hidden = 'hidden';
     function whtrns() {
-     $('.full,.side,.dline').css('transition', transit); if ($(k).css('background-color') == maroon) {$('.bar,.bad,.tlft,.ssc,.slcc,.st,.barlink,.fakebar,.bakefar,.logo').css('transition', transit)};
+     $('.full,.side').css('transition', transit); $(dline).css('transition', 'background ' + transit); if ($(k).css('background-color') == maroon) {$('.bar,.bad,.tlft,.ssc,.slcc,.st,.barlink,.fakebar,.bakefar,.logo').css('transition', transit)};
      setTimeout(function() {$('.bar,.full,.side,.bad,.tlft,.ssc,.slcc,.st,.dline,.barlink,.fakebar,.bakefar,.logo').css('transition', transot)}, 500);
     }; function gotrns() {if ($(k).css('background-color') == maroon) {$('.bar,.bad,.tlft,.barlink,.fakebar,.bakefar,.logo').css('transition', transit); setTimeout(function() {$('.bar,.bad,.tlft,.barlink,.fakebar,.bakefar,.logo').css('transition', transot)}, 500);};};
     function botrns() {if ($(k).css('background-color') == maroon) {
