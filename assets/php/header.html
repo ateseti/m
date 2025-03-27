@@ -193,7 +193,7 @@
      if ($(s).css('background-color') == awan) {$(s).addClass('stopen'); if ($(k).css('background-color') == maroon) {sblwh(); tblwh();};}; $(inputbox).focus();
     }; function tchpn() {
      $('.dline,.eline').css('transition', 'transform ' + transet); $('.txtm:not(#txtc)').addClass('ndopen'); $('.dline,.tline,.eline').addClass('blimopen');
-     $(topd).addClass('topdo'); $(botd).addClass('botdo'); $(tope).addClass('topso'); $(bote).addClass('botso'); setTimeout(function() {$(hmd).addClass('ndopen');}, 250);
+     $(topd).addClass('topdo'); $(botd).addClass('botdo'); setTimeout(function() {$(hmd).addClass('ndopen'); $(tope).addClass('topso'); $(bote).addClass('botso');}, 250);
      if ($(n).css('background-color') == linen) {setTimeout(function() {$(txtc).removeClass('ndopen')}, 500)} else {if (matchMedia('(hover: hover)').matches) {cop()} else {if ($(blck).css('opacity') == '0') {cop()} else {$(txtc).removeClass('ndopen')}};};
      setTimeout(function() {$(hme).addClass('ndopen'); $('.dline,.eline').removeClass('blimopen');}, 500);
     }; function sdpn() {
@@ -216,8 +216,7 @@
      if ($(k).css('background-color') == maroon) {$('.bad,.tlft,.bakefar').css('transition', transit); $(logo).css('transition', 'mask-size ' + transit); gblwh(); blwh(); setTimeout(function() {$('.bad,.tlft,.bakefar,.logo').css('transition', transot)}, 500);}
      else {$('.bar,.bad,.tlft,.ssc,.slcc,.st,.dline,.eline,.barlink,.fakebar,.bakefar,.logo').css('transition', transit); sblwh(); tblwh(); setTimeout(function() {$('.bar,.bad,.tlft,.ssc,.slcc,.st,.dline,.eline,.barlink,.fakebar,.bakefar,.logo').css('transition', transot)}, 500);};
     }).observe(document.getElementById('k'), {attributes: true, attributeFilter: ['class']});
-    $(drop).addClass('open'); $('.full,.side').addClass('sdclose sdnone'); $('.itemdrop:not(#idw),.searchres,.sidebar,.didebar,.tidebar').addClass('badan');
-    $('#tops,#topt').addClass('topso'); $('#mids,#midt,#mide').addClass('midso'); $('#bots,#bott').addClass('botso'); $(tope).addClass('topdo'); $(bote).addClass('botdo');
+    $(drop).addClass('open'); $('.full,.side').addClass('sdclose sdnone'); $('.itemdrop:not(#idw),.searchres,.sidebar,.didebar,.tidebar').addClass('badan'); $('#tops,#topt').addClass('topso'); $('#mids,#midt,#mide').addClass('midso'); $('#bots,#bott').addClass('botso');
     $(inputbox).on('focus', function() {if ($(searchbox).css('background-color') == trans) {$(searchbox).addClass('blimopen')}; tpbgt();}).on('blur', function() {if ($(searchbox).css('background-color') == biru) {$(searchbox).removeClass('blimopen')}; tpbgt();});
     $(inputbox).on('input', function() {if (!$(inputbox).val()) {if ($(hms).css('opacity') == '1') {gcl()}} else {if ($(hms).css('opacity') == '0') {gop()}}; tpbgt();});
     $('#txtw,#txtc,.hms,.brck,.blck').on('mousedown', function() {return false}); $(txtw).on('click', function() {gotrns(); bltrns(); bls(); smnpn(); tchpn();}); $(txtc).addClass('ndopen').on('click', function() {zls()});
