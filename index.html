@@ -41,10 +41,10 @@
   <div class='f'></div>
   <script>
    $(document).ready(function() {
-    var ps = 'home'; var h = '.h'; var c = '.c'; var f = '.f'; var video = 'video'; var hhcov = '.hhcov'; var gwcov = '.gwcov'; var gmcov = '.gmcov'; var gmwindi = '.gmwindi';
+    var ps = 'home'; var h = '.h'; var c = '.c'; var f = '.f'; var video = 'video'; var hhcov = '.hhcov'; var gwcov = '.gwcov'; var gmcov = '.gmcov'; var gmwindi = '.gmwindi'; var hitam = 'rgb(0, 0, 0)';
     new ResizeObserver(entries => {
      if ((($(window).width())) > (($(window).height() / 9) * 16)) {$(video).css({'width': '100%', 'height': 'auto'})} else {$(video).css({'width': 'auto', 'height': '100%'})};
-     if ($(window).width() < 356) {} else {};
+     if ($(window).width() < 356) {if ($(gmwindi).css('background-color') == hitam) {}} else {};
      $(hhcov).css('margin-top', '-' + $(hhcov).height() + 'px'); $(gwcov).css('margin-top', '-' + $(gwcov).height() + 'px'); $(gmcov).css('margin-top', '-' + $(gmcov).height() + 'px');
     }).observe(document.querySelector('body'));
     sessionStorage.setItem('ps', ps); $(h).load('assets/php/header.html'); $(f).load('assets/php/footer.html'); setTimeout(function() {$('.c,.f').addClass('mshow')}, 500);
