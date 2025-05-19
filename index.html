@@ -45,7 +45,7 @@
     function turnmaroon() {if ($(gmwindi).css('background-color') == hitam) {$(gmwindi).addClass('indimaroon')}};
     new ResizeObserver(entries => {
      if ((($(window).width())) > (($(window).height() / 9) * 16)) {$(video).css({'width': '100%', 'height': 'auto'})} else {$(video).css({'width': 'auto', 'height': '100%'})};
-     if ($(window).width() < 356) {turnmaroon()} else {$(gmwindi).removeClass('indimaroon')};
+     if ($(window).width() < 356) {turnmaroon()} else if ($(window).width() > 1023 && $(window).width() < 1423) {turnmaroon()} else {$(gmwindi).removeClass('indimaroon')};
      $(hhcov).css('margin-top', '-' + $(hhcov).height() + 'px'); $(gwcov).css('margin-top', '-' + $(gwcov).height() + 'px'); $(gmcov).css('margin-top', '-' + $(gmcov).height() + 'px');
     }).observe(document.querySelector('body'));
     sessionStorage.setItem('ps', ps); $(h).load('assets/php/header.html'); $(f).load('assets/php/footer.html'); setTimeout(function() {$('.c,.f').addClass('mshow')}, 500);
