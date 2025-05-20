@@ -45,18 +45,23 @@
      <div class='nacov'><div class='ggpad'></div><div class='hbutcov'><div class='natitle'>new arrivals</div><div class='hbutton'>shop&nbsp;now</div></div><div class='ggpad'></div></div>
     </div>
    </div>
+   <div class='retowe'>
+    <div class='rtwsub'><div class='rtwimga'><img src='assets/image-mobile-rtw-1080.png' width='100%'></div><div class='rtwimgb'><img src='assets/image-desktop-rtw-1080.png' width='100%'></div>
+     <div class='rtwcov'><div class='ggpad'></div><div class='hbutcov'><div class='rtwtitle'>ready-to-wear</div><div class='hbutton'>shop&nbsp;now</div></div><div class='ggpad'></div></div>
+    </div>
+   </div>
   </div>
   <div class='f'></div>
   <script>
    $(document).ready(function() {
-    var ps = 'home'; var h = '.h'; var c = '.c'; var f = '.f'; var video = 'video'; var hhcov = '.hhcov'; var gwcov = '.gwcov'; var gmcov = '.gmcov'; var nacov = '.nacov'; var gmwindi = '.gmwindi';
+    var ps = 'home'; var h = '.h'; var c = '.c'; var f = '.f'; var video = 'video'; var hhcov = '.hhcov'; var gwcov = '.gwcov'; var gmcov = '.gmcov'; var nacov = '.nacov'; var rtwcov = '.rtwcov'; var gmwindi = '.gmwindi';
     var hitam = 'rgb(0, 0, 0)';
     function turnmaroon() {if ($(gmwindi).css('background-color') == hitam) {$(gmwindi).addClass('indimaroon')}};
     new ResizeObserver(entries => {
      if ((($(window).width())) > (($(window).height() / 9) * 16)) {$(video).css({'width': '100%', 'height': 'auto'})} else {$(video).css({'width': 'auto', 'height': '100%'})};
      if ($(window).width() < 356) {turnmaroon()} else if ($(window).width() > 1023 && $(window).width() < 1423) {turnmaroon()} else {$(gmwindi).removeClass('indimaroon')};
      $(hhcov).css('margin-top', '-' + $(hhcov).height() + 'px'); $(gwcov).css('margin-top', '-' + $(gwcov).height() + 'px'); $(gmcov).css('margin-top', '-' + $(gmcov).height() + 'px');
-     $(nacov).css('margin-top', '-' + $(nacov).height() + 'px');
+     $(nacov).css('margin-top', '-' + $(nacov).height() + 'px'); $(rtwcov).css('margin-top', '-' + $(rtwcov).height() + 'px');
     }).observe(document.querySelector('body'));
     new MutationObserver(function(gumwm) {
      if ($(gmwindi).css('background-color') == hitam) {$('.gwtitle,.gmtitle').removeClass('gwmmax')} else {$('.gwtitle,.gmtitle').addClass('gwmmax')};
