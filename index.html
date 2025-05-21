@@ -14,12 +14,12 @@
    body {margin: 0 auto; padding: env(safe-area-inset); font-family: var(--fon); background-color: var(--trans); overflow-x: hidden; overflow-y: hidden; touch-action: none;} body:focus {outline: none !important;}
    .c,.f,.naimgb,.rtwimgb {display: none;} .c {margin: 0 auto; flex-direction: column; align-items: center; text-transform: uppercase;} .hpad,.ggpad {width: 0px; height: 24px;}
    .v {height: 100dvh; overflow: hidden; touch-action: none; display: flex; justify-content: center; align-items: center; z-index: -1; pointer-events: none;}
-   .c,.v,.hbutcov,.gndr,.gwimg,.gmimg,.gwomen,.gmen,.newarr,.nasub,.naimga,.naimgb,.retowe,.rtwsub,.rtwimga,.rtwimgb {width: 100%;} .mshow,.gwimg,.gmimg,.newarr,.naimga,.retowe,.rtwimga {display: flex;}
+   .c,.v,.hbutcov,.gndr,.gwimg,.gmimg,.gwomen,.gmen,.newarr,.nasub,.naimga,.naimgb,.retowe,.rtwsub,.rtwimga,.rtwimgb,.artcl {width: 100%;} .mshow,.gwimg,.gmimg,.newarr,.naimga,.retowe,.rtwimga,.artcl {display: flex;}
    .hhcov,.hbutcov,.gndr,.gwomen,.gmen,.gwcov,.gmcov,.nasub,.nacov,.rtwsub,.rtwcov {display: flex; flex-direction: column;} .hhcov,.gwcov,.gmcov,.nacov,.rtwcov {width: var(--logo); padding: var(--pat); pointer-events: none;}
    .hbutcov {font-weight: bold; gap: 17px;} .htitle,.gwtitle,.gmtitle,.natitle,.rtwtitle {font-size: 33px; color: var(--putih); pointer-events: auto;} .htitle {max-width: 393px;} .gwmmax {max-width: 185px;}
    .hbutton {width: 133px; height: 59px; font-size: 17px; color: var(--hitam); background: var(--putih); display: flex; justify-content: center; align-items: center; cursor: pointer;
              pointer-events: auto; transition: color 0.2s ease, background 0.2s ease; -webkit-tap-highlight-color: rgba(38, 73, 150, 0.2);} .hbutton:hover {color: var(--putih); background: var(--biru);}
-   .gmwindi {width: 0px; height: 0px; background-color: var(--hitam);} .indimaroon {background-color: var(--maroon);}
+   .gmwindi {width: 0px; height: 0px; background-color: var(--hitam);} .indimaroon {background-color: var(--maroon);} .artcl {height: 200px; background: maroon;}
    @media screen and (min-width: 1024px) {.gwtitle,.gmtitle,.natitle,.rtwtitle {font-size: 67px;} .gwmmax {max-width: 375px;} .ggpad {height: 34px;}}
    @media screen and (min-width: 768px) {.hbutcov {gap: 21px;} .htitle {max-width: 798px; font-size: 67px;} .hpad {height: 34px;} .gndr {flex-direction: row;}
                                          .gwomen,.gmen {width: 50%;} .naimga,.rtwimga {display: none;} .naimgb,.rtwimgb {display: flex;}
@@ -50,6 +50,7 @@
      <div class='rtwcov'><div class='ggpad'></div><div class='hbutcov'><div class='rtwtitle'>ready-to-wear</div><div class='hbutton'>shop&nbsp;now</div></div><div class='ggpad'></div></div>
     </div>
    </div>
+   <div class='artcl'></div>
   </div>
   <div class='f'></div>
   <script>
