@@ -12,18 +12,20 @@
   <title>Mulavarman Official Website | For Human Beings</title>
   <style>
    body {margin: 0 auto; padding: env(safe-area-inset); font-family: var(--fon); background-color: var(--trans); overflow-x: hidden; overflow-y: hidden; touch-action: none;} body:focus {outline: none !important;}
-   .c,.f {display: none;} .c {margin: 0 auto; flex-direction: column; align-items: center; text-transform: uppercase;} .c,.prdtl {width: 100%;} .mshow,.tdvd,.prdtl,.prmgs,.prdscr {display: flex;} .tdvd {width: 0px; height: 64px;}
-   .prmgs,.prdscr {width: 50%;} .prmgs {height: 500px; background: maroon;} .prdscr {height: 250px; background: seagreen;} .advd {min-height: 1px; background: rgb(183, 183, 183);}
+   .c,.f {display: none;} .c {margin: 0 auto; flex-direction: column; align-items: center; text-transform: uppercase;} .c,.prdtl,.prmgc {width: 100%;} .mshow,.tdvd,.prdtl,.prmgs,.prmgc,.prdscr {display: flex;}
+   .prmgs,.prdscr {width: 50%;} .prmgs {flex-direction: column;} .prdscr {height: 250px; background: seagreen;} .prmgc {background: maroon;}
+   .tdvd {width: 0px; height: 64px;} .advd {min-height: 1px; background: rgb(183, 183, 183);}
    @media screen and (min-width: 768px) {.tdvd {height: 88px;}}
   </style>
   <script src='https://code.jquery.com/jquery-3.7.0.js'></script>
  </head>
  <body>
   <div class='h'></div>
-  <div class='c'><div class='tdvd'></div><div class='prdtl'><div class='prmgs'></div><div class='prdscr'></div></div><div class='advd'></div></div>
+  <div class='c'><div class='tdvd'></div><div class='prdtl'><div class='prmgs'><div class='prmgc'></div></div><div class='prdscr'></div></div><div class='advd'></div></div>
   <div class='f'></div>
   <script>
-   var ps = 'else'; var h = '.h'; var c = '.c'; var f = '.f';
+   var ps = 'else'; var h = '.h'; var c = '.c'; var f = '.f'; var prmgc = '.prmgc';
+   $(prmgc).css('height', $(prmgc).width() + 'px');
    sessionStorage.setItem('ps', ps); $(h).load('assets/php/header.html'); $(f).load('assets/php/footer.html'); setTimeout(function() {$('.c,.f').addClass('mshow'); $(window).scrollTop(0);}, 500);
   </script>
  </body>
