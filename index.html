@@ -12,7 +12,7 @@
   <title>Mulavarman Official Website | For Human Beings</title>
   <style>
    body {margin: 0 auto; padding: env(safe-area-inset); font-family: var(--fon); background-color: var(--trans); overflow-x: hidden; overflow-y: hidden; touch-action: none;} body:focus {outline: none !important;}
-   main,.c,.f,.naimgb,.rtwimgb {display: none;} main,.c {margin: 0 auto; flex-direction: column; align-items: center; text-transform: uppercase;} .hpad,.ggpad {width: 0px; height: 24px;}
+   .c,.f,.naimgb,.rtwimgb {display: none;} main,.c {margin: 0 auto; flex-direction: column; align-items: center; text-transform: uppercase;} .hpad,.ggpad {width: 0px; height: 24px;} main {display: flex;}
    .v {height: 100dvh; overflow: hidden; touch-action: none; display: flex; justify-content: center; align-items: center; z-index: -1; pointer-events: none;}
    main,.c,.v,.hbutcov,.gndr,.gwimg,.gmimg,.gwomen,.gmen,.newarr,.nasub,.naimga,.naimgb,.retowe,.rtwsub,.rtwimga,.rtwimgb,.artcov,.artcl,.arttitle {width: 100%;}
    .mshow,.gwimg,.gmimg,.newarr,.naimga,.retowe,.rtwimga,.artcl,.arttitle {display: flex;} .hhcov,.hbutcov,.gndr,.gwomen,.gmen,.gwcov,.gmcov,.nasub,.nacov,.rtwsub,.rtwcov,.artcov {display: flex; flex-direction: column;}
@@ -73,7 +73,7 @@
     new MutationObserver(function(gumwm) {
      if ($(gmwindi).css('background-color') == hitam) {$('.gwtitle,.gmtitle').removeClass('gwmmax')} else {$('.gwtitle,.gmtitle').addClass('gwmmax')};
     }).observe(document.getElementById('gmwindi'), {attributes: true, attributeFilter: ['class']});
-    sessionStorage.setItem('ps', ps); $(h).load('assets/php/header.html'); $(f).load('assets/php/footer.html'); setTimeout(function() {$('main,.c,.f').addClass('mshow'); $(window).scrollTop(0);}, 500);
+    sessionStorage.setItem('ps', ps); $(h).load('assets/php/header.html'); $(f).load('assets/php/footer.html'); setTimeout(function() {$('.c,.f').addClass('mshow'); $(window).scrollTop(0);}, 500);
    });
   </script>
  </body>
