@@ -13,9 +13,9 @@
   <style>
    body {margin: 0 auto; padding: env(safe-area-inset); font-family: var(--fon); background-color: var(--trans); overflow-x: hidden; overflow-y: hidden; touch-action: none;} body:focus {outline: none !important;}
    main,.f {display: none;} main {margin: 0 auto; flex-direction: column; align-items: center; text-transform: uppercase;} main,.product-wrapper,.prmgc,.prbutton {width: 100%;} .product-wrapper {margin-top: 64px;}
-   .mshow,.product-wrapper,.prmgs,.prmgc,.prdscr,.prbutton,.prclr,.prclrc {display: flex;} .prmgc,.prbutton,.prclrc {justify-content: center; align-items: center;} .prmgs {width: 50%;} .prmgs,.prdscr {flex-direction: column;}
-   .prdscr {width: calc(50% - 22px); height: max-content; padding: var(--pat); font-size: 17px; color: var(--hitam);} .prmgc,.prclrc {overflow: hidden;} .prmgc {cursor: zoom-in;} .prclrc {height: 100%; cursor: pointer;}
-   img {height: 100%; object-fit: cover;} .prtitle {font-size: 33px; font-weight: bold;} .prclr {height: 75px; gap: 8px;}
+   .mshow,.product-wrapper,.product-gallery,.prmgc,.prdscr,.prbutton,.prclr,.prclrc {display: flex;} .prmgc,.prbutton,.prclrc {justify-content: center; align-items: center;}
+   .product-gallery {width: 50%;} .product-gallery,.prdscr {flex-direction: column;} .prdscr {width: calc(50% - 22px); height: max-content; padding: var(--pat); font-size: 17px; color: var(--hitam);}
+   .prmgc,.prclrc {overflow: hidden;} .prmgc {cursor: zoom-in;} .prclrc {height: 100%; cursor: pointer;} img {height: 100%; object-fit: cover;} .prtitle {font-size: 33px; font-weight: bold;} .prclr {height: 75px; gap: 8px;}
    .prbutton {height: 59px; font-weight: bold; text-decoration: none; color: var(--putih); background: var(--hitam); cursor: pointer;
               transition: background 0.2s ease; -webkit-tap-highlight-color: rgba(38, 73, 150, 0.2);} .prbutton:hover {background: var(--biru);}
    hr {width: 100%; height: 1px; margin-block: 0; margin-inline: 0; background: rgb(183, 183, 183); border-width: 0; pointer-events: none;}
@@ -27,10 +27,10 @@
   <div class='h'></div>
   <main>
    <section class='product-wrapper'>
-    <div class='prmgs'>
+    <section class='product-gallery'>
      <div class='prmgc'><img src='assets/t1.avif' title='Crew'></div><div class='prmgc'><img src='assets/t2.avif' title='Crew'></div><div class='prmgc'><img src='assets/t3.avif' title='Crew'></div>
      <div class='prmgc'><img src='assets/t4.avif' title='Crew'></div><div class='prmgc'><img src='assets/t5.avif' title='Crew'></div>
-    </div>
+    </section>
     <div class='prdscr'>
      <div class='prtitle'>crew</div><div class='prprice' style='text-transform:none;'>Rp127.000</div>
      <div class='prclr'><div class='prclrc'><img src='assets/t1.avif'></div><div class='prclrc'><img src='assets/t2.avif'></div><div class='prclrc'><img src='assets/t3.avif'></div></div>
