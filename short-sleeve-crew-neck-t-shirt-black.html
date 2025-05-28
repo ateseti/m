@@ -12,7 +12,7 @@
   <title>Crew | Mulavarman</title>
   <style>
    body {margin: 0 auto; padding: env(safe-area-inset); font-family: var(--fon); background-color: var(--trans); overflow-x: hidden; overflow-y: hidden; touch-action: none;} body:focus {outline: none !important;}
-   main,.f {display: none;} main {margin: 0 auto; flex-direction: column; align-items: center; text-transform: uppercase;} main,.product-wrapper,.product-image,.prbutton {width: 100%;} .product-wrapper {margin-top: 64px;}
+   main {display: none;} main {margin: 0 auto; flex-direction: column; align-items: center; text-transform: uppercase;} main,.product-wrapper,.product-image,.prbutton {width: 100%;} .product-wrapper {margin-top: 64px;}
    .mshow,.product-wrapper,.product-gallery,.product-image,.prdscr,.prbutton,.prclr,.prclrc {display: flex;} .product-image,.prbutton,.prclrc {justify-content: center; align-items: center;}
    .product-gallery {width: 50%;} .product-gallery,.prdscr {flex-direction: column;} .prdscr {width: calc(50% - 22px); height: max-content; padding: var(--pat); font-size: 17px; color: var(--hitam);}
    .product-image,.prclrc {overflow: hidden;} .product-image {cursor: zoom-in;} .prclrc {height: 100%; cursor: pointer;} img {height: 100%; object-fit: cover;} .prtitle {font-size: 33px; font-weight: bold;} .prclr {height: 75px; gap: 8px;}
@@ -24,7 +24,6 @@
   <script src='https://code.jquery.com/jquery-3.7.0.js'></script>
  </head>
  <body>
-  <div class='h'></div>
   <main>
    <div class="product-wrapper">
     <section class="product-gallery">
@@ -39,11 +38,10 @@
     </div>
    </div>
   <hr></main>
-  <div class='f'></div>
   <script>
-   var ps = 'else'; var h = '.h'; var f = '.f'; var productImage = ".product-image"; var prclrc = '.prclrc';
+   var ps = 'else'; var productImage = ".product-image"; var prclrc = '.prclrc';
    new ResizeObserver(entries => {$(productImage).css('height', ($(productImage).width() * 1.25) + 'px'); $(prclrc).css('width', ($(prclrc).height() * 0.8) + 'px');}).observe(document.querySelector('body'));
-   sessionStorage.setItem('ps', ps); $(h).load('assets/php/header.html'); $(f).load('assets/php/footer.html'); setTimeout(function() {$('main,.f').addClass('mshow'); $(window).scrollTop(0);}, 500);
+   sessionStorage.setItem('ps', ps); $(h).load('assets/php/header.html'); $(f).load('assets/php/footer.html'); setTimeout(function() {$('main').addClass('mshow'); $(window).scrollTop(0);}, 500);
   </script>
  </body>
 </html>
